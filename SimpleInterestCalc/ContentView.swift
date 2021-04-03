@@ -54,7 +54,7 @@ struct ContentView: View {
             }
             VStack{
                 HStack{
-                    Button(action: calculate) {
+                    Button(action: Calculate) {
                         Text("Calculate!" ).font(.title).padding()
                         .frame(width: 160, height: 55, alignment: .center)
                         .background(Color.green)
@@ -62,7 +62,7 @@ struct ContentView: View {
                         .clipShape(Capsule())
 
                     }
-                    Button(action: reset) {
+                    Button(action: Reset) {
                         Text("Reset!" ).font(.title).padding()
                         .frame(width: 160, height: 55, alignment: .center)
                         .background(Color.green)
@@ -78,7 +78,7 @@ struct ContentView: View {
         
     }
     
-    func calculate() {
+    func Calculate() {
         let timeData = Float(time) ?? 0.0
         let intrestData = Float(intrest) ?? 0.0
         let principalData = Float(principal) ?? 0.0
@@ -87,7 +87,7 @@ struct ContentView: View {
         result = String(format: "%.2f", resultData)
     }
 
-    func reset() {
+    func Reset() {
         principal = ""
         time = ""
         intrest=""
